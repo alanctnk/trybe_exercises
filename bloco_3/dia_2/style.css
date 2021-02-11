@@ -1,0 +1,31 @@
+h1 {
+    font-family: sans-serif;
+    font-size: 65px;
+    color: orange;
+}
+
+ul {
+    background-color: grey;
+    line-height: 3;
+    text-align: center;
+    list-style-type: none;
+}
+
+.dawn {
+    background: #F3904F;
+    background: -webkit-linear-gradient(to right, #3B4371, #F3904F);
+    background: linear-gradient(to right, #3B4371, #F3904F); 
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+body {
+    font-size: 16px;
+}
+
+.amarelo{background-color: yellow;}
+.vermelho{background-color: red;}
+.marrom{background-color: brown;}
