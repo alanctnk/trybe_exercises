@@ -1,0 +1,29 @@
+a {
+    /* display: inline-block;
+    width: 150px; */
+    padding: 0px 40px 0px 40px;
+}
+
+
+nav {
+   margin-left: 40px;
+}
+
+
+
+table, th, td{
+    border: 1px solid black;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+.video{
+    float: right;
+    margin: 10px;
+}
+
+img {
+    width: 60%;
+}
