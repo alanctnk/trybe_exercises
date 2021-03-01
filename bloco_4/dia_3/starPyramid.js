@@ -1,19 +1,22 @@
-let n = 3; // you can take input from prompt or change the value
-let string = "";
-// External loop
-for (let i = 1; i <= n; i += 1) {
+let n = 5
 
-  // printing spaces
-  for (let j = n; j > i; j--) {
-    string += " ";
-  }
 
-  // printing star
-  for (let k = 0; k < i * 2 - 1; k += 1) {
-    string += "*";
-  }
-  string += "\n";
+if (n > 1) {
+
+    // Variáveis que concatenadas irão formar cada linha da piramide 
+    let star = "*"
+    let whiteSpace = " "
+    let amount = 0
+    
+    // O for irá percorrer a cada dois elementos
+    for (let i = 1; i < n+1; i += 2) {
+
+        // Em amount está a quantidade de espaços vazios de cada lado do "*". Que é n - o indice que representa a quantidade "*".
+        let line = ""
+        amount = (n-i) / 2
+        line = whiteSpace.repeat(amount) + star.repeat(i) + whiteSpace.repeat(amount)
+        console.log(line)
+    }
+} else {
+    console.log("Valor inválido!")
 }
-console.log(string);
-
-// Fonte >> https://www.tutorialstonight.com/js/javascript-star-pattern.php

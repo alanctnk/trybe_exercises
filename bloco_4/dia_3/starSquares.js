@@ -13,6 +13,7 @@ if (n > 1) {
         switch(line.length) {
             case n:
                 nStarsLine = line
+                break;
         }
 
         // Ainda na iteração, um novo for vai percorrer essa nova string(NstarsLine) e pra cada iteração, será impressa ela mesma configurando o seu quadrado.
