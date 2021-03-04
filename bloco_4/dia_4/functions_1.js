@@ -14,4 +14,4 @@ function isPalindrome(word){
   }
 }
 
-isPalindrome("arara")
+isPalindrome("neden")

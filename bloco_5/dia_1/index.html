@@ -68,10 +68,10 @@
       // -----------------------------------------------------
 
       const converteCxAlta = function() {
-        arr = document.getElementsByTagName('p')
-        for (let index = 0; index <arr.length; index += 1)  {
-          arr[index].innerHTML = arr[index].innerHTML.toUpperCase()
-        }
+        let elList = document.getElementsByTagName('p')
+        let arr = [...elList]
+        arr.forEach( el => el.innerHTML = el.innerHTML.toUpperCase())
+          
       }
       converteCxAlta()
       // ------------------------------------------------------
