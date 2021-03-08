@@ -157,3 +157,12 @@ label {
 .highlight {
   background-color: lightblue;
 }
+
+#days .zoom{
+  font-size: 160%;
+  font-weight: 700;
+}
+
+.selected {
+  text-decoration: line-through;
+}

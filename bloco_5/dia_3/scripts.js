@@ -77,9 +77,63 @@ function changeFridayText() {
   }
 }
 
+
+function zoomIn(event){
+  let zoomDay = event.target
+  zoomDay.classList.add("zoom")
+}
+
+function zoomOut(event) {
+  event.target.classList.remove("zoom")
+}
+
+function createTask(str) {
+  let taskEl = createTag('span')
+  taskEl.innerHTML = str
+  document.querySelector('.my-tasks').appendChild(taskEl)
+}
+
+function addSubtitle(color) {
+  let task = document.querySelector('.my-tasks span')
+  let subtitle = createTag('div')  
+  subtitle.classList.add("task")
+  subtitle.style.backgroundColor = color
+  document.querySelector('.my-tasks').appendChild(subtitle)
+}
+
+function selectTask(event) {
+  task = event.target
+  task.classList.toggle("selected")
+}
+
+function addTaskColorToDay(event){
+  let day = event.target
+  let taskColor = document.querySelector(".task").style.backgroundColor
+  let dayColor = day.style.color
+  if (dayColor !== taskColor) {
+    day.style.color = taskColor
+    
+  } else {
+    day.style.color = "rgb(119,119,119)"
+  }
+}
+
+// CHAMANDO AS FUNÇÕES
 createDaysOfTheWeek()
 createDaysOfMonth()
 buttonHoliday('Feriado')
 button.addEventListener('click', changeHolidayColor)
 buttonFriday('Sextou')
 button2.addEventListener('click', changeFridayText)
+let daysList = document.querySelectorAll('.day')
+daysList.forEach( el => {
+  el.addEventListener('mouseenter', zoomIn)
+  el.addEventListener('mouseleave', zoomOut)
+})
+createTask('Estudar')
+
+addSubtitle('aqua')
+document.querySelector('.task').addEventListener('click', selectTask)
+daysList.forEach( el => {
+  el.addEventListener('click', addTaskColorToDay)
+})
